@@ -25,6 +25,5 @@
     "@copilot-extensions/preview-sdk": "^4.0.0",
     "dotenv": "^16.4.5",
     "jwt-decode": "^4.0.0"
-    
   }
 }
