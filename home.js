@@ -197,7 +197,7 @@ const server = createServer(async (req, res) => {
 
       res.writeHead(200, { 'Content-Type': 'application/json' });
       console.log('Entra Token exchange successful');
-      res.writeHead(302, { Location: "https://github.com/enyilCorp" });
+      res.writeHead(302, { Location: `${process.env.GITHUB_REDIRECT_URL}` });
       return res.end();
     } catch (err) {
       res.writeHead(500);
