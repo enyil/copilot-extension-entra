@@ -1,26 +1,24 @@
 {
-  "name": "gh-model-extn",
+  "name": "copilot-extension-entra",
   "version": "1.0.0",
   "type": "module",
-  "description": "Sample Copilot Extension for Document search in google drives",
+  "description": "Sample Copilot Extension that uses entra-id",
   "scripts": {
-    "start": "node home.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node home.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ambilykk/amb-copilot-extensions.git"
+    "url": "git+https://github.com/enyil/copilot-extension-entra.git"
   },
   "keywords": [
     "copilot",
     "extension"
   ],
-  "author": "@ambilykk",
-  "license": "MIT",
+  "author": "@enyil",,
   "bugs": {
-    "url": "https://github.com/ambilykk/amb-copilot-extensions/issues"
+    "url": "https://github.com/enyil/copilot-extension-entra/issues"
   },
-  "homepage": "https://github.com/ambilykk/amb-copilot-extensions#readme",
+  "homepage": "https://github.com/enyil/copilot-extension-entra/issues",
   "dependencies": {
     "@azure-rest/ai-inference": "latest",
     "@azure/core-auth": "latest",
