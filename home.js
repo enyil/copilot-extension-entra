@@ -176,7 +176,7 @@ const server = createServer(async (req, res) => {
     return res.end();
   }
 
-  if (pathname === '/redirect') {
+  if (pathname === '/callback') {
     const code = query.code;
     if (!code) {
       res.writeHead(400);
