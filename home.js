@@ -1,6 +1,5 @@
 import { createServer } from 'node:http';
 import { prompt, createDoneEvent, createTextEvent, createConfirmationEvent } from "@copilot-extensions/preview-sdk";
-import { getRequestBody } from './get-request-body.js';
 import { parse } from 'node:url';
 import { jwtDecode } from 'jwt-decode';
 
@@ -34,6 +33,21 @@ function getUserInfoFromEntraToken(token) {
     console.error('Failed to decode Entra token:', error);
     return null;
   }
+}
+
+function getRequestBody(request) {
+  return new Promise((resolve) => {
+    const bodyParts = [];
+    let body;
+    request
+      .on("data", (chunk) => {
+        bodyParts.push(chunk);
+      })
+      .on("end", () => {
+        body = Buffer.concat(bodyParts);
+        resolve(body);
+      });
+  });
 }
 
 class TokenStore {
