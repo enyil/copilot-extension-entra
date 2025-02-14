@@ -232,9 +232,6 @@ const server = createServer(async (req, res) => {
         console.log('Unable to identify user from GitHub token');
         return res.end('Unable to identify user from GitHub token');
       }
-      if(userIdentifier === 'enyil') {
-        userIdentifier = 'enyil-dev@1vq0yr.onmicrosoft.com';
-      }
       const entraToken = tokenStore.getToken(userIdentifier);
       if (!entraToken) {
         console.log('No Entra token found, sending auth message');
